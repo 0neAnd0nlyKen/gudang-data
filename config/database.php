@@ -93,7 +93,6 @@ return [
             'charset' => env('DB_CHARSET', 'utf8'),
             'prefix' => '',
             'prefix_indexes' => true,
-            'search_path' => 'public',
             'sslmode' => 'prefer',
         ],
 
@@ -151,14 +150,15 @@ return [
             'persistent' => env('REDIS_PERSISTENT', false),
         ],
 
-        'default' => [
-            'url' => env('REDIS_URL'),
-            'host' => env('REDIS_HOST', '127.0.0.1'),
-            'username' => env('REDIS_USERNAME'),
-            'password' => env('REDIS_PASSWORD'),
-            'port' => env('REDIS_PORT', '6379'),
-            'database' => env('REDIS_DB', '0'),
-        ],
+        'default' => 'pgsql',
+        // 'default' => [
+        //     'url' => env('REDIS_URL'),
+        //     'host' => env('REDIS_HOST', '127.0.0.1'),
+        //     'username' => env('REDIS_USERNAME'),
+        //     'password' => env('REDIS_PASSWORD'),
+        //     'port' => env('REDIS_PORT', '6379'),
+        //     'database' => env('REDIS_DB', '0'),
+        // ],
 
         'cache' => [
             'url' => env('REDIS_URL'),
